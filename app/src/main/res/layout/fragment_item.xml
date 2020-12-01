@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#08FF5722"
+    android:layout_marginBottom="10pt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/edUid"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="0dp"
+        android:layout_height="30pt"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#FFFFFF"
+        android:src="@drawable/ic_baseline_account_circle_24"/>
+
+    <LinearLayout
+        android:id="@+id/llName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15pt"
+        android:paddingLeft="15pt"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/ivUser">
+
+        <TextView
+            android:text="Nombre(s):"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:layout_width="55pt"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:textSize="7pt"
+            android:paddingLeft="15pt"
+            android:text="Nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15pt"
+        android:paddingLeft="15pt"
+        android:paddingTop="2pt"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llName">
+
+        <TextView
+            android:text="Appellido(s):"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:layout_width="55pt"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvLast"
+            android:textSize="7pt"
+            android:paddingLeft="15pt"
+            android:text="Apellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15pt"
+        android:paddingLeft="15pt"
+        android:paddingTop="2pt"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llLast">
+
+        <TextView
+            android:text="Edad:"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:layout_width="55pt"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:textSize="7pt"
+            android:paddingLeft="15pt"
+            android:text="20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15pt"
+        android:paddingLeft="15pt"
+        android:paddingTop="2pt"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llAge">
+
+        <TextView
+            android:text="Teléfono:"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:layout_width="55pt"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTel"
+            android:textSize="7pt"
+            android:paddingLeft="15pt"
+            android:text="20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

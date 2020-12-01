@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.Room.FullscreenContainer"
+    tools:context=".AddFullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageButton
+        android:id="@+id/IBExit"
+        android:adjustViewBounds="true"
+        android:tooltipText="Salir"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/ic_baseline_fullscreen_exit_24"
+        android:layout_width="20pt"
+
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="15dp"
+        android:paddingTop="15pt"
+        android:paddingRight="15pt"
+        android:paddingLeft="15pt"
+        android:orientation="vertical">
+
+        <Space
+            android:minHeight="12pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--FIRST NAME-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:textSize="10pt"
+            android:text="Ingrese el nombre del alumno" />
+        <EditText
+            android:id="@+id/edFName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Nombre(s)" />
+        <Space
+            android:minHeight="12pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--LAST NAME-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:textSize="10pt"
+            android:text="Ingrese el apellido del alumno" />
+        <EditText
+            android:id="@+id/edLName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Apellido(s)" />
+        <Space
+            android:minHeight="12pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--AGE-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:textSize="10pt"
+            android:text="Ingrese la edad del alumno" />
+        <EditText
+            android:id="@+id/edAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:minEms="0"
+            android:maxEms="100"
+            android:hint="Edad" />
+        <Space
+            android:minHeight="12pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--TEL-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:textSize="10pt"
+            android:text="Ingrese el teléfono del alumno" />
+        <EditText
+            android:id="@+id/edTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="phone"
+            android:hint="Teléfono" />
+        <Space
+            android:minHeight="12pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--BUTTON-->
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar" />
+    </LinearLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="@style/Widget.Theme.Room.ButtonBar.Fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/dummy_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
